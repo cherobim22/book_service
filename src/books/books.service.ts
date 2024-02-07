@@ -8,7 +8,6 @@ import { BookEntity } from './entity/book.entity';
 export class BooksService {
     constructor(@InjectRepository(BookEntity) private bookRepository:Repository<BookEntity>){}
 
-
     async create(book: Book): Promise<BookEntity> {
        return await this.bookRepository.save(book)  
     }
